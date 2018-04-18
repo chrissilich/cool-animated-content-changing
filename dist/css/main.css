@@ -1,0 +1,192 @@
+/* 
+==============================================
+CONTENT:	Project Name Here
+AUTHOR:		Your Name Here
+==============================================
+
+TABLE OF CONTENTS:
+
+0. Reset
+1. Main Layout
+2. Content
+
+==============================================
+*/
+/* 0. Reset ================================= */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* 1. Main Layout ================================= */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: sans-serif;
+}
+
+/* 2. Content ================================= */
+.content {
+	position: relative;
+	overflow: hidden;
+	width: 100vw;
+	height: 100vh;
+}
+
+.content nav {
+	position: absolute;
+	bottom: 5%;
+	left: 0;
+	width: 100%;
+	text-align: center;
+}
+
+.content h1 {
+	font-size: 2em;
+	font-weight: bolder;
+}
+
+.content p {
+	font-weight: lighter;
+	line-height: 150%;
+}
+
+.content h1.home-heading {
+	position: absolute;
+	top: -5%;
+	left: 25%;
+	transition: 1s;
+}
+
+.content p.home-paragraph {
+	position: absolute;
+	top: 25%;
+	left: -50%;
+	width: 300px;
+	transform: translateY(40px);
+	transition: 1s;
+}
+
+.content[data-show="home"] h1.home-heading {
+	top: 25%;
+}
+
+.content[data-show="home"] p.home-paragraph {
+	left: 25%;
+}
+
+.content h2.page2and3-heading {
+	position: absolute;
+	bottom: -10%;
+	left: 15%;
+	transition: 1s;
+}
+
+.content[data-show="page2"] h2.page2and3-heading, .content[data-show="page3"] h2.page2and3-heading {
+	bottom: 10%;
+}
+
+.content h1.page2-heading {
+	position: absolute;
+	bottom: -10%;
+	left: 55%;
+	transition: 1s;
+}
+
+.content p.page2-paragraph {
+	position: absolute;
+	bottom: 25%;
+	left: 155%;
+	width: 400px;
+	transform: translateY(-40px);
+	transition: 1s;
+}
+
+.content[data-show="page2"] h1.page2-heading {
+	bottom: 25%;
+}
+
+.content[data-show="page2"] p.page2-paragraph {
+	left: 55%;
+}
+
+.content h1.page3-heading {
+	position: absolute;
+	top: 30%;
+	right: -30%;
+	text-align: right;
+	transition: 1s;
+}
+
+.content p.page3-paragraph {
+	position: absolute;
+	top: 40%;
+	right: -30%;
+	width: 250px;
+	transform: translateY(40px);
+	text-align: right;
+	transition: 1s;
+}
+
+.content[data-show="page3"] h1.page3-heading {
+	top: 35%;
+	right: 20%;
+}
+
+.content[data-show="page3"] p.page3-paragraph {
+	top: 35%;
+	right: 20%;
+}
+
+/*# sourceMappingURL=main.css.map */
